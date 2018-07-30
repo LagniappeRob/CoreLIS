@@ -4,14 +4,16 @@ using CoreLIS.API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreLIS.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20180729203504_MoveAddressModelToBaseModel")]
+    partial class MoveAddressModelToBaseModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -62,14 +64,6 @@ namespace CoreLIS.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedOn");
-
-                    b.Property<int>("LastModifiedBy");
-
-                    b.Property<DateTime>("LastModifiedOn");
-
                     b.Property<string>("Name");
 
                     b.HasKey("Id");
@@ -86,14 +80,6 @@ namespace CoreLIS.API.Migrations
                     b.Property<int?>("AddressId");
 
                     b.Property<int>("ClientId");
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedOn");
-
-                    b.Property<int>("LastModifiedBy");
-
-                    b.Property<DateTime>("LastModifiedOn");
 
                     b.Property<string>("Name");
 
@@ -117,14 +103,6 @@ namespace CoreLIS.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedOn");
-
-                    b.Property<int>("LastModifiedBy");
-
-                    b.Property<DateTime>("LastModifiedOn");
-
                     b.Property<float>("Latitude");
 
                     b.Property<float>("Longitude");
@@ -139,14 +117,6 @@ namespace CoreLIS.API.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("CreatedBy");
-
-                    b.Property<DateTime>("CreatedOn");
-
-                    b.Property<int>("LastModifiedBy");
-
-                    b.Property<DateTime>("LastModifiedOn");
 
                     b.Property<string>("Note");
 
