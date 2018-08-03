@@ -3,7 +3,6 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { ValueComponent } from './value/value.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NavComponent } from './nav/nav.component';
