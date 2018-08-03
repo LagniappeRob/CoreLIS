@@ -1,22 +1,39 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { NavComponent } from './nav/nav.component';
+import { FormsModule } from '../../node_modules/@angular/forms';
+import { AuthService } from './_services/auth.service';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+
+
+
 @NgModule({
    declarations: [
       AppComponent,
-      ValueComponent
+      NavComponent,
+      HomeComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
-      HttpClientModule
+      HttpClientModule,
+      FormsModule
    ],
-   providers: [],
+   providers: [
+      AuthService
+   ],
    bootstrap: [
       AppComponent
+   ],
+   schemas: [
+      NO_ERRORS_SCHEMA
    ]
 })
 export class AppModule { }
